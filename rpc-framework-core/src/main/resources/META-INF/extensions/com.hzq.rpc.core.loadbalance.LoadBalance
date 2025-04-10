@@ -1,0 +1,3 @@
+random=com.hzq.rpc.core.loadbalance.impl.RandomLoadBalance
+roundRobin=com.hzq.rpc.core.loadbalance.impl.RoundRobinLoadBalance
+consistentHash=com.hzq.rpc.core.loadbalance.impl.ConsistentHashLoadBalance

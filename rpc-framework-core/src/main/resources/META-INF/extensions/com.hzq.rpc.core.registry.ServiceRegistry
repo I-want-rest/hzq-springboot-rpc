@@ -1,0 +1,1 @@
+zk=com.hzq.rpc.core.registry.zk.ZookeeperServiceRegistry

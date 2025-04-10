@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.hzq.rpc</groupId>
+        <artifactId>hzq-rpc</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+        <!-- <relativePath/> 设定一个空值将始终从仓库中获取，不从本地路径获取 -->
+    </parent>
+
+    <artifactId>rpc-client-spring-boot</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>rpc-client-spring-boot</name>
+    <url>http://maven.apache.org</url>
+    <description> rpc-client 应用，整合了 rpc-client 和 autoconfigure 模块</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <encoding>UTF-8</encoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version> <!-- 或最新版本 -->
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>${cglib.version}</version>
+        </dependency>
+        <!-- 设置为可选依赖，由 starter 进行引入，增加可扩展性 -->
+        <dependency>
+            <groupId>com.hzq.rpc</groupId>
+            <artifactId>rpc-framework-core</artifactId>
+            <version>${rpc.version}</version>
+            <optional>true</optional>
+            <scope>compile</scope>
+        </dependency>
+        <!-- 一些可选的，但强烈建议使用的注解解析器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

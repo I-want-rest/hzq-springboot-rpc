@@ -1,0 +1,15 @@
+server:
+  port: 8882
+rpc:
+  client:
+    load-balance: random
+    serialization: PROTOSTUFF
+    transport: netty
+    registry: zookeeper
+    registry-addr: localhost:2181
+    timeout: 5000
+
+# 设置控制台日志显示级别
+logging:
+  level:
+    com.hzq.rpc: info
