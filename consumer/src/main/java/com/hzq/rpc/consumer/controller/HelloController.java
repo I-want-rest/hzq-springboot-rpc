@@ -22,6 +22,10 @@ public class HelloController {
     private AbstractService abstractService;
 
 
+    @RequestMapping("/hello")
+    public String helloWorld(){
+        return helloService.sayHelloWorld();
+    }
     @RequestMapping("/hello/{name}")
     public String hello(@PathVariable("name") String name) {
 
