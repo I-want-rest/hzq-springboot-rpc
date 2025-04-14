@@ -1,4 +1,5 @@
-Netty + Zookeeper + SpringBoot 实现的自定义 RPC 框架。通信协议包括 Http、Socket 等。
+## hzq-rpc
+Netty + Zookeeper + SpringBoot 实现的自定义 RPC 框架。引入了通信协议包括 Http、Socket 等。
 ### 项目实现
 
 - [x] 自定义创建的消息协议，编解码器
