@@ -11,3 +11,4 @@ Netty + Zookeeper + SpringBoot 实现的自定义 RPC 框架。通信协议包�
 - [x] 集成 Spring，自定义注解提供 RPC 组件扫描、服务注册、服务消费
 - [x] 集成 SpringBoot，实现自动配置
 - [x] 自定义的 SPI 机制
+各个模块内有详细的模块readme介绍
